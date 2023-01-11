@@ -21,6 +21,16 @@ input {
   cursor: text;
   font-size: 17px;
 }
+input[type = "checkbox"]{
+  appearance: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 400px){
+  input[type = "email"],input[type = "password"],input[type = "text"]{
+    width: 140px;
+  }
+}
 
 html {
   background: url("background_img.webp") no-repeat center center fixed;
@@ -50,10 +60,11 @@ main {
 
 
 button {
-  border: 2px solid var(--darkestBlue);
   cursor: pointer;
   background-color: transparent;
   box-shadow: -2px 2px green;
+  font-size: x-large;
+  font-weight:bold;
 }
 
 button:hover {

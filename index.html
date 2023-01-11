@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <h1>Good to see you again</h1>
-        <form method = "post">
-            <label for = "user_email">Email</label>
-            <br>
-            <input required id = "user_email" type = "email">
-            <br>
-            <label for = "pass">Password</label>
-            <br>
-            <input required id = "pass" type = "password">
-            <br>
-            <button type = "submit" onclick="validation()">Sign In</button>
-        </form>
-        <br>
+      <h1 style = "margin-bottom: 20px;">Good to see you again</h1>
+      <form method="post">
+        <label for="user_email">Email</label>
+        <br />
+        <input style = "margin-bottom: 20px;" required id="user_email" type="email" />
+        <br />
+        <label for="pass">Password</label>
+        <br />
+        <input style = "margin-bottom: 20px;" required id="pass" type="password" />
+        <br />
+        <input style = "margin-bottom: 20px;" type="checkbox" onclick="showPassword()" />Show password <br />
         <a>Dont have an account?</a>
-        <a>Forgot password</a>
-        <script>
-            function validation()
-            {
-                let email = document.getElementById("user_email").value;
-                let password = document.getElementById("pass").value;
-                (email == "admin@it.com" && password == "admin") ? alert("login success"):alert("login failed");
-            }
-        </script>
+        <br>
+        <a >Forgot password</a>
+        <br>
+        <button style = "margin-top: 20px;" type="submit" onclick="validation()">Sign In</button>
+      </form>
+      <br />
+      <script>
+        function validation() {
+          let email = document.getElementById("user_email").value;
+          let password = document.getElementById("pass").value;
+          email == "admin@it.com" && password == "admin"
+            ? alert("login success")
+            : alert("login failed");
+        }
+        function showPassword() {
+          let pass = document.getElementById("pass");
+          if (pass.type === "password") {
+            pass.type = "text";
+          } else {
+            pass.type = "password";
+          }
+        }
+      </script>
     </main>
-</body>
+  </body>
 </html>
