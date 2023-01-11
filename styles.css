@@ -33,7 +33,7 @@ html {
 main {
   background-color: rgba(240, 255, 255, .5);
   width: 60vw;
-  height: 50vh;
+  height: 72vh;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -45,7 +45,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-radius: px;
+  border-radius: 11px;
 }
 
 

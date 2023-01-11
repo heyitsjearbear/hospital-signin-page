@@ -10,19 +10,28 @@
 <body>
     <main>
         <h1>Good to see you again</h1>
-        <form>
+        <form method = "post">
             <label for = "user_email">Email</label>
             <br>
-            <input id = "user_email" type = "email">
+            <input required id = "user_email" type = "email">
             <br>
             <label for = "pass">Password</label>
             <br>
-            <input id = "pass" type = "password">
+            <input required id = "pass" type = "password">
+            <br>
+            <button type = "submit" onclick="validation()">Sign In</button>
         </form>
-        <button type = "submit">Sign In</button>
         <br>
         <a>Dont have an account?</a>
         <a>Forgot password</a>
+        <script>
+            function validation()
+            {
+                let email = document.getElementById("user_email").value;
+                let password = document.getElementById("pass").value;
+                (email == "admin@it.com" && password == "admin") ? alert("login success"):alert("login failed");
+            }
+        </script>
     </main>
 </body>
 </html>
