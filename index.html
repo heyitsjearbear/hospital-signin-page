@@ -9,22 +9,36 @@
   </head>
   <body>
     <main>
-      <h1 style = "margin-bottom: 20px;">Good to see you again</h1>
+      <h1 style="margin-bottom: 20px">Good to see you again</h1>
       <form method="post">
         <label for="user_email">Email</label>
         <br />
-        <input style = "margin-bottom: 20px;" required id="user_email" type="email" />
+        <input
+          style="margin-bottom: 20px"
+          required
+          id="user_email"
+          type="email"
+        />
         <br />
         <label for="pass">Password</label>
         <br />
-        <input style = "margin-bottom: 20px;" required id="pass" type="password" />
+        <input style="margin-bottom: 20px" required id="pass" type="password" />
         <br />
-        <input style = "margin-bottom: 20px;" type="checkbox" onclick="showPassword()" />Show password <br />
+        <input
+          id="show_pass"
+          style="margin-bottom: 20px"
+          type="checkbox"
+          onclick="showPassword()"
+        />
+        <label for="show_pass">Show Password</label>
+        <br />
         <a>Dont have an account?</a>
-        <br>
-        <a >Forgot password</a>
-        <br>
-        <button style = "margin-top: 20px;" type="submit" onclick="validation()">Sign In</button>
+        <br />
+        <a>Forgot password</a>
+        <br />
+        <button style="margin-top: 20px" type="submit" onclick="validation()">
+          Sign In
+        </button>
       </form>
       <br />
       <script>
